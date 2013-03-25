@@ -1,0 +1,38 @@
+.view-id-ca_directory .col-1, .view-display-id-panel_pane_1 .col-2, .view-display-id-panel_pane_1 .col-3 {
+  width: 33.33%;
+}
+
+.view-id-ca_directory .views-field-title {
+  font-weight: bold;
+  font-size: 15px;
+  text-decoration: none;
+}
+.view-id-ca_directory .views-field-field-ca-directory-owner {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.views-field-field-ca-directory-image {
+  float: left;
+  padding-right: 10px;
+  clear: left;
+  margin-top: 5px;
+}
+
+.pane-node-field-ca-directory-owner {
+  clear: left;
+}
+
+.field-name-field-ca-directory-category {
+  font-style: italic;
+}
+
+.views-field-field-ca-directory-category {
+  font-style: italic;
+}
+
+.views-label-field-ca-directory-address, .views-label-field-ca-directory-phone, .views-label-field-ca-directory-fax, .views-label-field-ca-directory-email {
+  float: left;
+  padding-right: 5px;
+}
+
