@@ -14,7 +14,9 @@ function ca_directory_user_default_permissions() {
   $permissions['create directory content'] = array(
     'name' => 'create directory content',
     'roles' => array(
-      0 => 'directory admin',
+      'administrator' => 'administrator',
+      'directory admin' => 'directory admin',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'node',
   );
@@ -23,7 +25,9 @@ function ca_directory_user_default_permissions() {
   $permissions['delete any directory content'] = array(
     'name' => 'delete any directory content',
     'roles' => array(
-      0 => 'directory admin',
+      'administrator' => 'administrator',
+      'directory admin' => 'directory admin',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'node',
   );
@@ -32,7 +36,9 @@ function ca_directory_user_default_permissions() {
   $permissions['delete own directory content'] = array(
     'name' => 'delete own directory content',
     'roles' => array(
-      0 => 'directory admin',
+      'administrator' => 'administrator',
+      'directory admin' => 'directory admin',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'node',
   );
@@ -41,7 +47,9 @@ function ca_directory_user_default_permissions() {
   $permissions['edit any directory content'] = array(
     'name' => 'edit any directory content',
     'roles' => array(
-      0 => 'directory admin',
+      'administrator' => 'administrator',
+      'directory admin' => 'directory admin',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'node',
   );
@@ -50,7 +58,9 @@ function ca_directory_user_default_permissions() {
   $permissions['edit own directory content'] = array(
     'name' => 'edit own directory content',
     'roles' => array(
-      0 => 'directory admin',
+      'administrator' => 'administrator',
+      'directory admin' => 'directory admin',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'node',
   );
