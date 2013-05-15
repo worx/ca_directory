@@ -350,7 +350,7 @@ function ca_directory_default_page_manager_handlers() {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
-  $handler->name = 'term_view_panel_context';
+  $handler->name = 'ca_directory_term_view_panel_context';
   $handler->task = 'term_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
@@ -415,7 +415,7 @@ function ca_directory_default_page_manager_handlers() {
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-12';
   $handler->conf['display'] = $display;
-  $export['term_view_panel_context'] = $handler;
+  $export['ca_directory_term_view_panel_context'] = $handler;
 
   return $export;
 }
