@@ -13,7 +13,7 @@ function ca_directory_user_default_roles() {
   // Exported role: directory admin.
   $roles['directory admin'] = array(
     'name' => 'directory admin',
-    'weight' => '7',
+    'weight' => 7,
     'machine_name' => 'directory_admin',
   );
 
