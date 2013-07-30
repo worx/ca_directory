@@ -331,7 +331,7 @@ function ca_directory_views_default_views() {
   $handler->display->display_options['filters']['title']['expose']['operator_id'] = 'title_op';
   $handler->display->display_options['filters']['title']['expose']['label'] = 'Business Name';
   $handler->display->display_options['filters']['title']['expose']['operator'] = 'title_op';
-  $handler->display->display_options['filters']['title']['expose']['identifier'] = 'title';
+  $handler->display->display_options['filters']['title']['expose']['identifier'] = 'business';
   $handler->display->display_options['filters']['title']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
@@ -349,7 +349,7 @@ function ca_directory_views_default_views() {
   $handler->display->display_options['filters']['field_ca_directory_owner_value']['expose']['operator_id'] = 'field_ca_directory_owner_value_op';
   $handler->display->display_options['filters']['field_ca_directory_owner_value']['expose']['label'] = 'Owner';
   $handler->display->display_options['filters']['field_ca_directory_owner_value']['expose']['operator'] = 'field_ca_directory_owner_value_op';
-  $handler->display->display_options['filters']['field_ca_directory_owner_value']['expose']['identifier'] = 'field_ca_directory_owner_value';
+  $handler->display->display_options['filters']['field_ca_directory_owner_value']['expose']['identifier'] = 'owner';
   $handler->display->display_options['filters']['field_ca_directory_owner_value']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
@@ -362,12 +362,11 @@ function ca_directory_views_default_views() {
   $handler->display->display_options['filters']['tid']['id'] = 'tid';
   $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
   $handler->display->display_options['filters']['tid']['field'] = 'tid';
-  $handler->display->display_options['filters']['tid']['value'] = '';
   $handler->display->display_options['filters']['tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['tid']['expose']['operator_id'] = 'tid_op';
   $handler->display->display_options['filters']['tid']['expose']['label'] = 'Category';
   $handler->display->display_options['filters']['tid']['expose']['operator'] = 'tid_op';
-  $handler->display->display_options['filters']['tid']['expose']['identifier'] = 'tid';
+  $handler->display->display_options['filters']['tid']['expose']['identifier'] = 'category';
   $handler->display->display_options['filters']['tid']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
@@ -376,6 +375,7 @@ function ca_directory_views_default_views() {
     13007701 => 0,
     6915241 => 0,
   );
+  $handler->display->display_options['filters']['tid']['type'] = 'select';
   $handler->display->display_options['filters']['tid']['vocabulary'] = 'directory';
 
   /* Display: CA Directory: Grid Template One */
