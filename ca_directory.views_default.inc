@@ -256,6 +256,13 @@ function ca_directory_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'grid';
   $handler->display->display_options['style_options']['columns'] = '3';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'Coming soon.';
+  $handler->display->display_options['empty']['area']['format'] = 'filtered_html';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -360,7 +367,7 @@ function ca_directory_views_default_views() {
   $handler->display->display_options['filters']['tid']['expose']['operator_id'] = 'tid_op';
   $handler->display->display_options['filters']['tid']['expose']['label'] = 'Category';
   $handler->display->display_options['filters']['tid']['expose']['operator'] = 'tid_op';
-  $handler->display->display_options['filters']['tid']['expose']['identifier'] = 'category';
+  $handler->display->display_options['filters']['tid']['expose']['identifier'] = 'tid';
   $handler->display->display_options['filters']['tid']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
@@ -369,7 +376,26 @@ function ca_directory_views_default_views() {
     13007701 => 0,
     6915241 => 0,
   );
-  $handler->display->display_options['filters']['tid']['type'] = 'select';
+  $handler->display->display_options['filters']['tid']['is_grouped'] = TRUE;
+  $handler->display->display_options['filters']['tid']['group_info']['label'] = 'Category';
+  $handler->display->display_options['filters']['tid']['group_info']['identifier'] = 'category';
+  $handler->display->display_options['filters']['tid']['group_info']['group_items'] = array(
+    1 => array(
+      'title' => '',
+      'operator' => 'or',
+      'value' => '',
+    ),
+    2 => array(
+      'title' => '',
+      'operator' => 'or',
+      'value' => '',
+    ),
+    3 => array(
+      'title' => '',
+      'operator' => 'or',
+      'value' => '',
+    ),
+  );
   $handler->display->display_options['filters']['tid']['vocabulary'] = 'directory';
 
   /* Display: CA Directory: Grid Template One */
