@@ -273,7 +273,7 @@ function ca_directory_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_type'] = 'h3';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Owner */
+  /* Field: Content: Contact */
   $handler->display->display_options['fields']['field_ca_directory_owner']['id'] = 'field_ca_directory_owner';
   $handler->display->display_options['fields']['field_ca_directory_owner']['table'] = 'field_data_field_ca_directory_owner';
   $handler->display->display_options['fields']['field_ca_directory_owner']['field'] = 'field_ca_directory_owner';
@@ -341,7 +341,7 @@ function ca_directory_views_default_views() {
     13007701 => 0,
     6915241 => 0,
   );
-  /* Filter criterion: Content: Owner (field_ca_directory_owner) */
+  /* Filter criterion: Content: Contact (field_ca_directory_owner) */
   $handler->display->display_options['filters']['field_ca_directory_owner_value']['id'] = 'field_ca_directory_owner_value';
   $handler->display->display_options['filters']['field_ca_directory_owner_value']['table'] = 'field_data_field_ca_directory_owner';
   $handler->display->display_options['filters']['field_ca_directory_owner_value']['field'] = 'field_ca_directory_owner_value';
@@ -350,7 +350,7 @@ function ca_directory_views_default_views() {
   $handler->display->display_options['filters']['field_ca_directory_owner_value']['expose']['operator_id'] = 'field_ca_directory_owner_value_op';
   $handler->display->display_options['filters']['field_ca_directory_owner_value']['expose']['label'] = 'Owner';
   $handler->display->display_options['filters']['field_ca_directory_owner_value']['expose']['operator'] = 'field_ca_directory_owner_value_op';
-  $handler->display->display_options['filters']['field_ca_directory_owner_value']['expose']['identifier'] = 'owner';
+  $handler->display->display_options['filters']['field_ca_directory_owner_value']['expose']['identifier'] = 'contact';
   $handler->display->display_options['filters']['field_ca_directory_owner_value']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
@@ -635,7 +635,7 @@ function ca_directory_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_type'] = 'h3';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Owner */
+  /* Field: Content: Contact */
   $handler->display->display_options['fields']['field_ca_directory_owner']['id'] = 'field_ca_directory_owner';
   $handler->display->display_options['fields']['field_ca_directory_owner']['table'] = 'field_data_field_ca_directory_owner';
   $handler->display->display_options['fields']['field_ca_directory_owner']['field'] = 'field_ca_directory_owner';
@@ -714,7 +714,7 @@ function ca_directory_views_default_views() {
     13007701 => 0,
     6915241 => 0,
   );
-  /* Filter criterion: Content: Owner (field_ca_directory_owner) */
+  /* Filter criterion: Content: Contact (field_ca_directory_owner) */
   $handler->display->display_options['filters']['field_ca_directory_owner_value']['id'] = 'field_ca_directory_owner_value';
   $handler->display->display_options['filters']['field_ca_directory_owner_value']['table'] = 'field_data_field_ca_directory_owner';
   $handler->display->display_options['filters']['field_ca_directory_owner_value']['field'] = 'field_ca_directory_owner_value';
@@ -767,7 +767,7 @@ function ca_directory_views_default_views() {
     'directory' => 'directory',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  $handler->display->display_options['path'] = 'category/%/feed';
+  $handler->display->display_options['path'] = 'directory/category/%/feed';
   $handler->display->display_options['displays'] = array(
     'ca_directory_term_list_1' => 'ca_directory_term_list_1',
     'default' => 0,

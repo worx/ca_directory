@@ -370,8 +370,8 @@ function ca_directory_default_page_manager_handlers() {
         0 => array(
           'name' => 'term_vocabulary',
           'settings' => array(
-            'vids' => array(
-              1 => '1',
+            'machine_name' => array(
+              'directory' => 'directory',
             ),
           ),
           'context' => 'argument_term_1',

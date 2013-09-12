@@ -5,3 +5,49 @@
  */
 
 include_once 'ca_directory.features.inc';
+
+/**
+ * Implements hook_menu()
+ */
+function ca_directory_menu() {
+  $items['admin/config/worx_features/directory'] = array(
+    'title' => 'Directory Configuration',
+    'description' => 'Override settings for ca_directory',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('ca_directory_settings_form'),
+    'access arguments' => array('worx features admin'),
+    'file' => 'ca_directory.admin.inc',
+    'file path' => drupal_get_path('module', 'ca_directory'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+  $items['admin/config/worx_features/directory/general'] = array(
+    'title' => 'General Settings',
+    'description' => 'Override settings for ca_directory',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('ca_directory_settings_form'),
+    'access arguments' => array('worx features admin'),
+    'file' => 'ca_directory.admin.inc',
+    'file path' => drupal_get_path('module', 'ca_directory'),
+    'type' => MENU_DEFAULT_LOCAL_TASK,
+  );
+  
+  return $items;
+}
+
+/**
+ * implements hook_menu_alter().
+ */
+function ca_directory_menu_alter(&$items) {
+  $items['directory']['title'] = variable_get('ca_directory_menu_title', 'Directory');
+}
+
+/**
+ * Implements hook_panels_pre_render().
+ */
+function ca_directory_panels_pre_render($panel, $renderer) {
+  foreach ($panel->content as $key => $value) {
+    if ($value->subtype == 'ca_directory_list-ca_directory_list_1') {
+      $panel->title = variable_get('ca_directory_panel_title', 'Directory');
+    }
+  }
+}

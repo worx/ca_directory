@@ -339,7 +339,7 @@ function ca_directory_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_ca_directory_owner',
-    'label' => 'Owner',
+    'label' => 'Contact',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -454,11 +454,11 @@ function ca_directory_field_default_field_instances() {
   t('Address');
   t('Body');
   t('Categories');
+  t('Contact');
   t('Email');
   t('Fax');
   t('Image');
   t('Map');
-  t('Owner');
   t('Phone');
   t('Website');
 

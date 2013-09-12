@@ -21,4 +21,7 @@ function ca_directory_install() {
 	
   // Set the Pathauto for the node.
   variable_set('pathauto_node_directory_pattern', 'directory/[node:title]');
+	
+  // Set the Pathauto for the terms.
+  variable_set('pathauto_taxonomy_term_directory_pattern', 'directory/category/[term:name]');
 }

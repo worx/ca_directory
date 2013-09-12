@@ -36,3 +36,7 @@
   padding-right: 5px;
 }
 
+.node-type-directory .field-name-field-ca-directory-categories .field-item {margin-right: 5px;}
+
+.ca-directory-list td,
+.ca-directory-list-term td {vertical-align: top;}
