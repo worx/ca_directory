@@ -1,0 +1,47 @@
+.ca-directory-list table, 
+.ca-directory-list tbody, 
+.ca-directory-list tr, 
+.ca-directory-list tr td, 
+.ca-directory-list-term table, 
+.ca-directory-list-term tbody, 
+.ca-directory-list-term tr, 
+.ca-directory-list-term tr td {
+  display:block;
+  width: 100%;
+  border: none;
+}
+
+.ca-directory-list tr td, 
+.ca-directory-list-term tr td {
+  float: left;
+  padding: 0;
+  vertical-align: text-top;
+}
+
+@media only screen and (min-width:481px) {
+  .ca-directory-list tr td, .ca-directory-list-term tr td {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 649px) {
+  .ca-directory-list tr:nth-child(1) td:nth-child(2n + 1), .ca-directory-list-term tr:nth-child(1) td:nth-child(2n + 1) {clear: left;}
+  .ca-directory-list tr:nth-child(2) td:nth-child(2), .ca-directory-list-term tr:nth-child(2) td:nth-child(2) {clear: left;}
+  .ca-directory-list tr:nth-child(3) td:nth-child(2n + 1), .ca-directory-list-term tr:nth-child(3) td:nth-child(2n + 1) {clear: left;}
+}
+
+@media only screen and (min-width:650px) {
+  .ca-directory-list table, 
+  .ca-directory-list tbody, 
+  .ca-directory-list-term table, 
+  .ca-directory-list-term tbody {display: table;}
+  .ca-directory-list tr, 
+  .ca-directory-list-term tr {display: table-row;}
+  .ca-directory-list td, 
+  .ca-directory-list-term tr td {display: table-celll;}
+
+  .ca-directory-list tr td, .ca-directory-list-term tr td {
+    padding: 0;
+    width: 33%;
+  }
+}
