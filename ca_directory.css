@@ -1,13 +1,13 @@
-.view-id-ca_directory .col-1, .view-display-id-panel_pane_1 .col-2, .view-display-id-panel_pane_1 .col-3 {
+.view-id-ca_directory_list .col-1, .view-id-ca_directory_list .col-2, .view-id-ca_directory_list .col-3 {
   width: 33.33%;
 }
 
-.view-id-ca_directory .views-field-title {
+.view-id-ca_directory_list .views-field-title {
   font-weight: bold;
   font-size: 15px;
   text-decoration: none;
 }
-.view-id-ca_directory .views-field-field-ca-directory-owner {
+.view-id-ca_directory_list .views-field-field-ca-directory-owner {
   font-weight: bold;
   font-size: 14px;
 }
