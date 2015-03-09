@@ -51,3 +51,12 @@ function ca_directory_panels_pre_render($panel, $renderer) {
     }
   }
 }
+
+/**
+* Implementation of hook_ctools_plugin_directory()
+*/
+function ca_directory_ctools_plugin_directory($owner, $plugin_type) {
+  if ($owner == 'ctools') {
+    return 'plugins/' . $plugin_type;;
+  }
+}

@@ -31,6 +31,16 @@ function ca_directory_settings_form() {
     '#required' => TRUE,
     '#description' => t('What would you like the menu title to be?'),
   );
+  $form['ca_directory_list_template'] = array(
+    '#type' => 'select',
+    '#title' => t('Dirtory\'s list template'),
+    '#options' => array(
+      'ca_directory_list_template_one' => t('Template one'),
+      'ca_directory_list_template_one_flex' => t('Template one Flex'),
+    ),
+    '#required' => TRUE,
+    '#default_value' => variable_get('ca_directory_list_template', 'ca_directory_list_template_one'),
+  );
   $form['actions'] = array(
     '#type' => 'actions',
   );

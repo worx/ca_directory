@@ -40,3 +40,13 @@
 
 .ca-directory-list td,
 .ca-directory-list-term td {vertical-align: top;}
+
+/* Flex List */
+.ca-directory-flex .view-content {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.ca-directory-flex .views-row {
+  width: 33%
+}

@@ -284,26 +284,36 @@ function ca_directory_views_default_views() {
   $handler->display->display_options['fields']['field_ca_directory_address']['table'] = 'field_data_field_ca_directory_address';
   $handler->display->display_options['fields']['field_ca_directory_address']['field'] = 'field_ca_directory_address';
   $handler->display->display_options['fields']['field_ca_directory_address']['element_label_type'] = 'strong';
+  $handler->display->display_options['fields']['field_ca_directory_address']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_ca_directory_address']['empty_zero'] = TRUE;
   /* Field: Content: Phone */
   $handler->display->display_options['fields']['field_ca_directory_phone']['id'] = 'field_ca_directory_phone';
   $handler->display->display_options['fields']['field_ca_directory_phone']['table'] = 'field_data_field_ca_directory_phone';
   $handler->display->display_options['fields']['field_ca_directory_phone']['field'] = 'field_ca_directory_phone';
   $handler->display->display_options['fields']['field_ca_directory_phone']['element_label_type'] = 'strong';
+  $handler->display->display_options['fields']['field_ca_directory_phone']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_ca_directory_phone']['empty_zero'] = TRUE;
   /* Field: Content: Fax */
   $handler->display->display_options['fields']['field_ca_directory_fax']['id'] = 'field_ca_directory_fax';
   $handler->display->display_options['fields']['field_ca_directory_fax']['table'] = 'field_data_field_ca_directory_fax';
   $handler->display->display_options['fields']['field_ca_directory_fax']['field'] = 'field_ca_directory_fax';
   $handler->display->display_options['fields']['field_ca_directory_fax']['element_label_type'] = 'strong';
+  $handler->display->display_options['fields']['field_ca_directory_fax']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_ca_directory_fax']['empty_zero'] = TRUE;
   /* Field: Content: Email */
   $handler->display->display_options['fields']['field_ca_directory_email']['id'] = 'field_ca_directory_email';
   $handler->display->display_options['fields']['field_ca_directory_email']['table'] = 'field_data_field_ca_directory_email';
   $handler->display->display_options['fields']['field_ca_directory_email']['field'] = 'field_ca_directory_email';
   $handler->display->display_options['fields']['field_ca_directory_email']['element_label_type'] = 'strong';
+  $handler->display->display_options['fields']['field_ca_directory_email']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_ca_directory_email']['empty_zero'] = TRUE;
   /* Field: Content: Website */
   $handler->display->display_options['fields']['field_ca_directory_website']['id'] = 'field_ca_directory_website';
   $handler->display->display_options['fields']['field_ca_directory_website']['table'] = 'field_data_field_ca_directory_website';
   $handler->display->display_options['fields']['field_ca_directory_website']['field'] = 'field_ca_directory_website';
   $handler->display->display_options['fields']['field_ca_directory_website']['element_label_type'] = 'strong';
+  $handler->display->display_options['fields']['field_ca_directory_website']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_ca_directory_website']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_ca_directory_website']['click_sort_column'] = 'url';
   /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
@@ -403,6 +413,19 @@ function ca_directory_views_default_views() {
   $handler = $view->new_display('panel_pane', 'CA Directory: Grid Template One', 'ca_directory_list_1');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['pane_title'] = 'CA Directory Grid Template View';
+  $handler->display->display_options['pane_category']['name'] = 'CA List';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['inherit_panels_path'] = '1';
+
+  /* Display: CA Directory: Flex Template One */
+  $handler = $view->new_display('panel_pane', 'CA Directory: Flex Template One', 'panel_pane_1');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['pane_title'] = 'CA Directory: Flex Template One';
   $handler->display->display_options['pane_category']['name'] = 'CA List';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['inherit_panels_path'] = '1';
