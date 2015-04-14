@@ -7,21 +7,29 @@
  */
 function ca_directory_install() {  
   // Update the imce roles profiles to set the Admin and writer role.
-	$imce_roles_profiles = variable_get('imce_roles_profiles');
-	
+  $imce_roles_profiles = variable_get('imce_roles_profiles');
+
   $imce_roles_profiles_vaule = array (
     'weight' => '-9',
     'public_pid' => 2,
     'private_pid' => 2,
-	);
-	
-	$imce_roles_profiles[6915241] = $imce_roles_profiles_vaule;
-	
+  );
+  
+  $imce_roles_profiles[6915241] = $imce_roles_profiles_vaule;
+
   variable_set('imce_roles_profiles', $imce_roles_profiles);
-	
+
   // Set the Pathauto for the node.
   variable_set('pathauto_node_directory_pattern', 'directory/[node:title]');
-	
+
   // Set the Pathauto for the terms.
   variable_set('pathauto_taxonomy_term_directory_pattern', 'directory/category/[term:name]');
+
+  // Added the permission administer taxonomy and assign node weights for Directory Admin.
+  user_role_change_permissions(6915241, 
+    array(
+      'administer taxonomy' => TRUE,
+      'assign node weights' => TRUE,
+    )
+  );
 }
