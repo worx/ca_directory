@@ -57,6 +57,6 @@ function ca_directory_panels_pre_render($panel, $renderer) {
 */
 function ca_directory_ctools_plugin_directory($owner, $plugin_type) {
   if ($owner == 'ctools') {
-    return 'plugins/' . $plugin_type;;
+    return 'plugins/' . $plugin_type;
   }
 }
