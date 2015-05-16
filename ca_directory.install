@@ -29,7 +29,7 @@ function ca_directory_install() {
   user_role_change_permissions(6915241, 
     array(
       'administer taxonomy' => TRUE,
-      'assign node weight' => TRUE,
+      'assign node weights' => TRUE,
     )
   );
 }
