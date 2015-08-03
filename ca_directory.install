@@ -39,7 +39,7 @@ function ca_directory_install() {
  * Enable the taxonomy/term/%taxonomy_term page
  * Added the permission administer taxonomy and assign node weights for Directory Admin.
  */
-function ca_blog_update_7000() {
+function ca_directory_update_7000() {
   // Get the worx_aurora_base_enable variable to default set if not already set.
   variable_get('worx_aurora_base_enable', 'worx_aurora_base_disabled');
 
