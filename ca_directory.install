@@ -33,3 +33,25 @@ function ca_directory_install() {
     )
   );
 }
+
+/**
+ * Setting worx_aurora_base_enable default so that panels can work corretly when aura base feature is not enabled.
+ * Enable the taxonomy/term/%taxonomy_term page
+ * Added the permission administer taxonomy and assign node weights for Directory Admin.
+ */
+function ca_blog_update_7000() {
+  // Get the worx_aurora_base_enable variable to default set if not already set.
+  variable_get('worx_aurora_base_enable', 'worx_aurora_base_disabled');
+
+  // Enable the taxonomy/term/%taxonomy_term page without creating a conflict with other features that the page enabled as well.
+  variable_set('page_manager_term_view_disabled', '0');
+
+  // Added the permission administer taxonomy and assign node weights for Directory Admin.
+  user_role_change_permissions(6915241, 
+    array(
+      'administer taxonomy' => TRUE,
+      'assign node weights' => TRUE,
+    )
+  );
+}
+
