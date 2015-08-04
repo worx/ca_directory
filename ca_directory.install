@@ -25,6 +25,9 @@ function ca_directory_install() {
   // Set the Pathauto for the terms.
   variable_set('pathauto_taxonomy_term_directory_pattern', 'directory/category/[term:name]');
 
+  // Enable the taxonomy/term/%taxonomy_term page without creating a conflict with other features that the page enabled as well.
+  variable_set('page_manager_term_view_disabled', '0');
+
   // Added the permission administer taxonomy and assign node weights for Directory Admin.
   user_role_change_permissions(6915241, 
     array(
