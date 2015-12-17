@@ -281,7 +281,6 @@ function ca_directory_views_default_views() {
   $handler->display->display_options['filters']['tid']['id'] = 'tid';
   $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
   $handler->display->display_options['filters']['tid']['field'] = 'tid';
-  $handler->display->display_options['filters']['tid']['value'] = '';
   $handler->display->display_options['filters']['tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['tid']['expose']['operator_id'] = 'tid_op';
   $handler->display->display_options['filters']['tid']['expose']['label'] = 'Category';
@@ -295,9 +294,9 @@ function ca_directory_views_default_views() {
     13007701 => 0,
     6915241 => 0,
   );
-  $handler->display->display_options['filters']['tid']['is_grouped'] = TRUE;
-  $handler->display->display_options['filters']['tid']['group_info']['label'] = 'Category';
-  $handler->display->display_options['filters']['tid']['group_info']['identifier'] = 'category';
+  $handler->display->display_options['filters']['tid']['group_info']['label'] = 'Has taxonomy term';
+  $handler->display->display_options['filters']['tid']['group_info']['identifier'] = 'tid';
+  $handler->display->display_options['filters']['tid']['group_info']['remember'] = FALSE;
   $handler->display->display_options['filters']['tid']['group_info']['group_items'] = array(
     1 => array(
       'title' => '',
@@ -315,6 +314,7 @@ function ca_directory_views_default_views() {
       'value' => '',
     ),
   );
+  $handler->display->display_options['filters']['tid']['type'] = 'select';
   $handler->display->display_options['filters']['tid']['vocabulary'] = 'directory';
 
   /* Display: CA Directory: Grid Template One */

@@ -10,7 +10,7 @@
 function ca_directory_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_ca_directory_address'
+  // Exported field_base: 'field_ca_directory_address'.
   $field_bases['field_ca_directory_address'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -29,7 +29,7 @@ function ca_directory_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_ca_directory_categories'
+  // Exported field_base: 'field_ca_directory_categories'.
   $field_bases['field_ca_directory_categories'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -55,7 +55,7 @@ function ca_directory_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_ca_directory_email'
+  // Exported field_base: 'field_ca_directory_email'.
   $field_bases['field_ca_directory_email'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -70,7 +70,7 @@ function ca_directory_field_default_field_bases() {
     'type' => 'email',
   );
 
-  // Exported field_base: 'field_ca_directory_fax'
+  // Exported field_base: 'field_ca_directory_fax'.
   $field_bases['field_ca_directory_fax'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -91,7 +91,7 @@ function ca_directory_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_ca_directory_image'
+  // Exported field_base: 'field_ca_directory_image'.
   $field_bases['field_ca_directory_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -113,7 +113,7 @@ function ca_directory_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_ca_directory_map'
+  // Exported field_base: 'field_ca_directory_map'.
   $field_bases['field_ca_directory_map'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -142,7 +142,7 @@ function ca_directory_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_ca_directory_owner'
+  // Exported field_base: 'field_ca_directory_owner'.
   $field_bases['field_ca_directory_owner'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -163,7 +163,7 @@ function ca_directory_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_ca_directory_phone'
+  // Exported field_base: 'field_ca_directory_phone'.
   $field_bases['field_ca_directory_phone'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -184,7 +184,7 @@ function ca_directory_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_ca_directory_website'
+  // Exported field_base: 'field_ca_directory_website'.
   $field_bases['field_ca_directory_website'] = array(
     'active' => 1,
     'cardinality' => 1,

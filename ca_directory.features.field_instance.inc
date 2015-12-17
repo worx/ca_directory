@@ -10,7 +10,7 @@
 function ca_directory_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-directory-body'
+  // Exported field_instance: 'node-directory-body'.
   $field_instances['node-directory-body'] = array(
     'bundle' => 'directory',
     'default_value' => NULL,
@@ -54,7 +54,7 @@ function ca_directory_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-directory-field_ca_directory_address'
+  // Exported field_instance: 'node-directory-field_ca_directory_address'.
   $field_instances['node-directory-field_ca_directory_address'] = array(
     'bundle' => 'directory',
     'default_value' => NULL,
@@ -94,7 +94,7 @@ function ca_directory_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-directory-field_ca_directory_categories'
+  // Exported field_instance: 'node-directory-field_ca_directory_categories'.
   $field_instances['node-directory-field_ca_directory_categories'] = array(
     'bundle' => 'directory',
     'default_value' => NULL,
@@ -134,7 +134,7 @@ function ca_directory_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-directory-field_ca_directory_email'
+  // Exported field_instance: 'node-directory-field_ca_directory_email'.
   $field_instances['node-directory-field_ca_directory_email'] = array(
     'bundle' => 'directory',
     'default_value' => NULL,
@@ -173,7 +173,7 @@ function ca_directory_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-directory-field_ca_directory_fax'
+  // Exported field_instance: 'node-directory-field_ca_directory_fax'.
   $field_instances['node-directory-field_ca_directory_fax'] = array(
     'bundle' => 'directory',
     'default_value' => NULL,
@@ -213,7 +213,7 @@ function ca_directory_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-directory-field_ca_directory_image'
+  // Exported field_instance: 'node-directory-field_ca_directory_image'.
   $field_instances['node-directory-field_ca_directory_image'] = array(
     'bundle' => 'directory',
     'deleted' => 0,
@@ -275,7 +275,7 @@ function ca_directory_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-directory-field_ca_directory_map'
+  // Exported field_instance: 'node-directory-field_ca_directory_map'.
   $field_instances['node-directory-field_ca_directory_map'] = array(
     'bundle' => 'directory',
     'default_value' => NULL,
@@ -330,7 +330,7 @@ function ca_directory_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-directory-field_ca_directory_owner'
+  // Exported field_instance: 'node-directory-field_ca_directory_owner'.
   $field_instances['node-directory-field_ca_directory_owner'] = array(
     'bundle' => 'directory',
     'default_value' => NULL,
@@ -370,7 +370,7 @@ function ca_directory_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-directory-field_ca_directory_phone'
+  // Exported field_instance: 'node-directory-field_ca_directory_phone'.
   $field_instances['node-directory-field_ca_directory_phone'] = array(
     'bundle' => 'directory',
     'default_value' => NULL,
@@ -410,7 +410,7 @@ function ca_directory_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-directory-field_ca_directory_website'
+  // Exported field_instance: 'node-directory-field_ca_directory_website'.
   $field_instances['node-directory-field_ca_directory_website'] = array(
     'bundle' => 'directory',
     'default_value' => NULL,
