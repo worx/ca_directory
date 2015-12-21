@@ -1069,7 +1069,7 @@ function ca_directory_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'CA Directory: Administration';
   $page->admin_description = '';
-  $page->path = 'directory/administration';
+  $page->path = 'directory/admin/administration';
   $page->access = array(
     'plugins' => array(
       0 => array(
@@ -1088,15 +1088,15 @@ function ca_directory_default_page_manager_pages() {
     'logic' => 'and',
   );
   $page->menu = array(
-    'type' => 'tab',
+    'type' => 'default tab',
     'title' => 'Administration',
     'name' => 'navigation',
     'weight' => '0',
     'parent' => array(
-      'type' => 'none',
-      'title' => '',
+      'type' => 'tab',
+      'title' => 'Admin',
       'name' => 'navigation',
-      'weight' => '0',
+      'weight' => '15',
     ),
   );
   $page->arguments = array();
@@ -1104,62 +1104,6 @@ function ca_directory_default_page_manager_pages() {
     'admin_paths' => FALSE,
   );
   $page->default_handlers = array();
-  $handler = new stdClass();
-  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
-  $handler->api_version = 1;
-  $handler->name = 'page_ca_directory_administration_panel_context';
-  $handler->task = 'page';
-  $handler->subtask = 'ca_directory_administration';
-  $handler->handler = 'panel_context';
-  $handler->weight = -29;
-  $handler->conf = array(
-    'title' => 'CA Directory: Admin',
-    'no_blocks' => 0,
-    'pipeline' => 'standard',
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => 'ca-admin ca-directory-admin',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
-    'relationships' => array(),
-  );
-  $display = new panels_display();
-  $display->layout = 'flexible';
-  $display->layout_settings = array();
-  $display->panel_settings = array(
-    'style_settings' => array(
-      'default' => NULL,
-      'center' => NULL,
-    ),
-  );
-  $display->cache = array();
-  $display->title = 'Adminstration';
-  $display->uuid = 'ca92a28e-b96f-4a34-b7e3-41ebb8543a1c';
-  $display->content = array();
-  $display->panels = array();
-    $pane = new stdClass();
-    $pane->pid = 'new-27cfe0c3-5333-4290-a680-06514d352670';
-    $pane->panel = 'center';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'ca_directory_admin-ca_directory_admin';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = '27cfe0c3-5333-4290-a680-06514d352670';
-    $display->content['new-27cfe0c3-5333-4290-a680-06514d352670'] = $pane;
-    $display->panels['center'][0] = 'new-27cfe0c3-5333-4290-a680-06514d352670';
-  $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = '0';
-  $handler->conf['display'] = $display;
-  $page->default_handlers[$handler->name] = $handler;
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
@@ -1223,6 +1167,62 @@ function ca_directory_default_page_manager_pages() {
     $pane->uuid = '27cfe0c3-5333-4290-a680-06514d352670';
     $display->content['new-27cfe0c3-5333-4290-a680-06514d352670'] = $pane;
     $display->panels['first-first'][0] = 'new-27cfe0c3-5333-4290-a680-06514d352670';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_ca_directory_administration_panel_context';
+  $handler->task = 'page';
+  $handler->subtask = 'ca_directory_administration';
+  $handler->handler = 'panel_context';
+  $handler->weight = -29;
+  $handler->conf = array(
+    'title' => 'CA Directory: Admin',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-admin ca-directory-admin',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+  );
+  $display = new panels_display();
+  $display->layout = 'flexible';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'center' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = 'Adminstration';
+  $display->uuid = 'ca92a28e-b96f-4a34-b7e3-41ebb8543a1c';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-27cfe0c3-5333-4290-a680-06514d352670';
+    $pane->panel = 'center';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_directory_admin-ca_directory_admin';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '27cfe0c3-5333-4290-a680-06514d352670';
+    $display->content['new-27cfe0c3-5333-4290-a680-06514d352670'] = $pane;
+    $display->panels['center'][0] = 'new-27cfe0c3-5333-4290-a680-06514d352670';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -1555,6 +1555,223 @@ function ca_directory_default_page_manager_pages() {
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['ca_directory_list'] = $page;
+
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
+  $page->name = 'ca_directory_sort_admin';
+  $page->task = 'page';
+  $page->admin_title = 'CA Directory: Sort Admin';
+  $page->admin_description = '';
+  $page->path = 'directory/admin/sort';
+  $page->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'role',
+        'settings' => array(
+          'rids' => array(
+            0 => 3,
+            1 => 4,
+            2 => 6915241,
+          ),
+        ),
+        'context' => 'logged-in-user',
+        'not' => FALSE,
+      ),
+    ),
+    'logic' => 'and',
+  );
+  $page->menu = array(
+    'type' => 'tab',
+    'title' => 'Sort',
+    'name' => 'navigation',
+    'weight' => '10',
+    'parent' => array(
+      'type' => 'tab',
+      'title' => 'Admin',
+      'name' => 'navigation',
+      'weight' => '-10',
+    ),
+  );
+  $page->arguments = array();
+  $page->conf = array(
+    'admin_paths' => FALSE,
+  );
+  $page->default_handlers = array();
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_ca_directory_sort_admin__panel_context_1189346e-57de-4211-990d-36417a8f60ad';
+  $handler->task = 'page';
+  $handler->subtask = 'ca_directory_sort_admin';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'Aurora Directory: Admin',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-admin ca-directory-admin',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'worx_aurora_base_settings',
+          'settings' => array(
+            'worx_aurora_base_enable' => 'worx_aurora_base_enabled',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+    ),
+    'name' => '',
+  );
+  $display = new panels_display();
+  $display->layout = 'worx_aurora';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'center' => NULL,
+      'first-first' => NULL,
+      'first-second' => NULL,
+      'first-third' => NULL,
+      'first-fourth' => NULL,
+      'first-fifth' => NULL,
+      'first-sixth' => NULL,
+      'second-first' => NULL,
+      'second-second' => NULL,
+      'second-third' => NULL,
+      'second-fourth' => NULL,
+      'second-fifth' => NULL,
+      'second-sixth' => NULL,
+      'third-first' => NULL,
+      'third-second' => NULL,
+      'third-third' => NULL,
+      'third-fourth' => NULL,
+      'third-fifth' => NULL,
+      'third-sixth' => NULL,
+      'fourth-first' => NULL,
+      'fourth-second' => NULL,
+      'fourth-third' => NULL,
+      'fourth-fourth' => NULL,
+      'fourth-fifth' => NULL,
+      'fourth-sixth' => NULL,
+      'fifth-first' => NULL,
+      'fifth-second' => NULL,
+      'fifth-third' => NULL,
+      'fifth-fourth' => NULL,
+      'fifth-fifth' => NULL,
+      'fifth-sixth' => NULL,
+      'sixth-first' => NULL,
+      'sixth-second' => NULL,
+      'sixth-third' => NULL,
+      'sixth-fourth' => NULL,
+      'sixth-fifth' => NULL,
+      'sixth-sixth' => NULL,
+      'seventh-first' => NULL,
+      'seventh-second' => NULL,
+      'seventh-third' => NULL,
+      'seventh-fourth' => NULL,
+      'seventh-fifth' => NULL,
+      'seventh-sixth' => NULL,
+      'eighth-first' => NULL,
+      'eighth-second' => NULL,
+      'eighth-third' => NULL,
+      'eighth-fourth' => NULL,
+      'eighth-fifth' => NULL,
+      'eighth-sixth' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = 'Adminstration';
+  $display->uuid = 'ca92a28e-b96f-4a34-b7e3-41ebb8543a1c';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-8d5979de-94bb-4b30-bba7-b453523556b9';
+    $pane->panel = 'first-first';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_directory_sort-ca_directory_sort';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '8d5979de-94bb-4b30-bba7-b453523556b9';
+    $display->content['new-8d5979de-94bb-4b30-bba7-b453523556b9'] = $pane;
+    $display->panels['first-first'][0] = 'new-8d5979de-94bb-4b30-bba7-b453523556b9';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_ca_directory_sort_admin__panel_context_42219c91-4789-497f-b200-3c09130c2a70';
+  $handler->task = 'page';
+  $handler->subtask = 'ca_directory_sort_admin';
+  $handler->handler = 'panel_context';
+  $handler->weight = 1;
+  $handler->conf = array(
+    'title' => 'CA Directory: Sort',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-admin ca-directory-admin',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'name' => '',
+  );
+  $display = new panels_display();
+  $display->layout = 'flexible';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'center' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = 'Adminstration';
+  $display->uuid = 'ca92a28e-b96f-4a34-b7e3-41ebb8543a1c';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-52793ae0-26ca-42b0-9d69-1704853fb97e';
+    $pane->panel = 'center';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_directory_sort-ca_directory_sort';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '52793ae0-26ca-42b0-9d69-1704853fb97e';
+    $display->content['new-52793ae0-26ca-42b0-9d69-1704853fb97e'] = $pane;
+    $display->panels['center'][0] = 'new-52793ae0-26ca-42b0-9d69-1704853fb97e';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['ca_directory_sort_admin'] = $page;
 
   return $pages;
 
