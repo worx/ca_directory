@@ -278,44 +278,32 @@ function ca_directory_views_default_views() {
     6915241 => 0,
   );
   /* Filter criterion: Content: Has taxonomy term */
-  $handler->display->display_options['filters']['tid']['id'] = 'tid';
-  $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
-  $handler->display->display_options['filters']['tid']['field'] = 'tid';
-  $handler->display->display_options['filters']['tid']['value'] = '';
-  $handler->display->display_options['filters']['tid']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['tid']['expose']['operator_id'] = 'tid_op';
-  $handler->display->display_options['filters']['tid']['expose']['label'] = 'Category';
-  $handler->display->display_options['filters']['tid']['expose']['operator'] = 'tid_op';
-  $handler->display->display_options['filters']['tid']['expose']['identifier'] = 'tid';
-  $handler->display->display_options['filters']['tid']['expose']['remember_roles'] = array(
+  $handler->display->display_options['filters']['tid_1']['id'] = 'tid_1';
+  $handler->display->display_options['filters']['tid_1']['table'] = 'taxonomy_index';
+  $handler->display->display_options['filters']['tid_1']['field'] = 'tid';
+  $handler->display->display_options['filters']['tid_1']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['tid_1']['expose']['operator_id'] = 'tid_1_op';
+  $handler->display->display_options['filters']['tid_1']['expose']['label'] = 'Category';
+  $handler->display->display_options['filters']['tid_1']['expose']['operator'] = 'tid_1_op';
+  $handler->display->display_options['filters']['tid_1']['expose']['identifier'] = 'category';
+  $handler->display->display_options['filters']['tid_1']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
     3 => 0,
     4 => 0,
+    246778053 => 0,
+    256820458 => 0,
+    227698236 => 0,
+    191817721 => 0,
+    192508511 => 0,
+    95728846 => 0,
     13007701 => 0,
+    246307762 => 0,
+    39516467 => 0,
     6915241 => 0,
   );
-  $handler->display->display_options['filters']['tid']['is_grouped'] = TRUE;
-  $handler->display->display_options['filters']['tid']['group_info']['label'] = 'Category';
-  $handler->display->display_options['filters']['tid']['group_info']['identifier'] = 'category';
-  $handler->display->display_options['filters']['tid']['group_info']['group_items'] = array(
-    1 => array(
-      'title' => '',
-      'operator' => 'or',
-      'value' => '',
-    ),
-    2 => array(
-      'title' => '',
-      'operator' => 'or',
-      'value' => '',
-    ),
-    3 => array(
-      'title' => '',
-      'operator' => 'or',
-      'value' => '',
-    ),
-  );
-  $handler->display->display_options['filters']['tid']['vocabulary'] = 'directory';
+  $handler->display->display_options['filters']['tid_1']['type'] = 'select';
+  $handler->display->display_options['filters']['tid_1']['vocabulary'] = 'directory';
 
   /* Display: CA Directory: Grid Template One */
   $handler = $view->new_display('panel_pane', 'CA Directory: Grid Template One', 'ca_directory_list_1');
