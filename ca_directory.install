@@ -27,6 +27,12 @@ function ca_directory_install() {
 
   // Enable the taxonomy/term/%taxonomy_term page without creating a conflict with other features that the page enabled as well.
   variable_set('page_manager_term_view_disabled', '0');
+  
+  $vocab = taxonomy_vocabulary_machine_name_load('directory');
+  $vocabvid = $vocab->vid;
+  
+  $editterm = 'edit terms in ' . $vocabvid;
+  $deleteterm = 'delete terms in ' . $vocabvid;
 
   // Set the permissions for Directory Admin.
   user_role_change_permissions(6915241, 
@@ -38,6 +44,8 @@ function ca_directory_install() {
       'delete own directory content' => TRUE,
       'edit any directory content' => TRUE,
       'edit own directory content' => TRUE,
+      $editterm => TRUE,
+      $deleteterm => TRUE,
     )
   );
 
@@ -49,6 +57,8 @@ function ca_directory_install() {
       'delete own directory content' => TRUE,
       'edit any directory content' => TRUE,
       'edit own directory content' => TRUE,
+      $editterm => TRUE,
+      $deleteterm => TRUE,
     )
   );
 
@@ -60,6 +70,8 @@ function ca_directory_install() {
       'delete own directory content' => TRUE,
       'edit any directory content' => TRUE,
       'edit own directory content' => TRUE,
+      $editterm => TRUE,
+      $deleteterm => TRUE,
     )
   );
 }
@@ -90,6 +102,12 @@ function ca_directory_update_7000() {
  * given these permissions without overridding the feature.
  */
 function ca_directory_update_7001() {
+  $vocab = taxonomy_vocabulary_machine_name_load('directory');
+  $vocabvid = $vocab->vid;
+  
+  $editterm = 'edit terms in ' . $vocabvid;
+  $deleteterm = 'delete terms in ' . $vocabvid;
+
   // Set the permissions for Directory Admin.
   user_role_change_permissions(6915241, 
     array(
@@ -98,6 +116,8 @@ function ca_directory_update_7001() {
       'delete own directory content' => TRUE,
       'edit any directory content' => TRUE,
       'edit own directory content' => TRUE,
+      $editterm => TRUE,
+      $deleteterm => TRUE,
     )
   );
 
@@ -109,6 +129,8 @@ function ca_directory_update_7001() {
       'delete own directory content' => TRUE,
       'edit any directory content' => TRUE,
       'edit own directory content' => TRUE,
+      $editterm => TRUE,
+      $deleteterm => TRUE,
     )
   );
 
@@ -120,6 +142,8 @@ function ca_directory_update_7001() {
       'delete own directory content' => TRUE,
       'edit any directory content' => TRUE,
       'edit own directory content' => TRUE,
+      $editterm => TRUE,
+      $deleteterm => TRUE,
     )
   );
 }
