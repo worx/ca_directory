@@ -14,7 +14,7 @@ function ca_directory_install() {
     'public_pid' => 2,
     'private_pid' => 2,
   );
-  
+
   $imce_roles_profiles[6915241] = $imce_roles_profiles_vaule;
 
   variable_set('imce_roles_profiles', $imce_roles_profiles);
@@ -27,51 +27,28 @@ function ca_directory_install() {
 
   // Enable the taxonomy/term/%taxonomy_term page without creating a conflict with other features that the page enabled as well.
   variable_set('page_manager_term_view_disabled', '0');
-  
-  $vocab = taxonomy_vocabulary_machine_name_load('directory');
-  $vocabvid = $vocab->vid;
-  
-  $editterm = 'edit terms in ' . $vocabvid;
-  $deleteterm = 'delete terms in ' . $vocabvid;
 
   // Set the permissions for Directory Admin.
-  user_role_change_permissions(6915241, 
+  user_role_grant_permissions(6915241, 
     array(
-      'administer taxonomy' => TRUE,
-      'assign node weight' => TRUE,
-      'create directory content' => TRUE,
-      'delete any directory content' => TRUE,
-      'delete own directory content' => TRUE,
-      'edit any directory content' => TRUE,
-      'edit own directory content' => TRUE,
-      $editterm => TRUE,
-      $deleteterm => TRUE,
+      'administer taxonomy',
+      'assign node weight',
     )
   );
 
-  // Set the permissions for Administrator
-  user_role_change_permissions(3, 
+  // Set the permissions for Administrator.
+  user_role_grant_permissions(3, 
     array(
-      'create directory content' => TRUE,
-      'delete any directory content' => TRUE,
-      'delete own directory content' => TRUE,
-      'edit any directory content' => TRUE,
-      'edit own directory content' => TRUE,
-      $editterm => TRUE,
-      $deleteterm => TRUE,
+      'administer taxonomy',
+      'assign node weight',
     )
   );
 
-  // Set the permissions for Webmaster
-  user_role_change_permissions(4, 
+  // Set the permissions for Webmaster.
+  user_role_grant_permissions(4, 
     array(
-      'create directory content' => TRUE,
-      'delete any directory content' => TRUE,
-      'delete own directory content' => TRUE,
-      'edit any directory content' => TRUE,
-      'edit own directory content' => TRUE,
-      $editterm => TRUE,
-      $deleteterm => TRUE,
+      'administer taxonomy',
+      'assign node weight',
     )
   );
 }
@@ -89,61 +66,32 @@ function ca_directory_update_7000() {
   variable_set('page_manager_term_view_disabled', '0');
 
   // Added the permission administer taxonomy and assign node weight for Directory Admin.
-  user_role_change_permissions(6915241, 
+  user_role_grant_permissions(6915241, 
     array(
-      'administer taxonomy' => TRUE,
-      'assign node weight' => TRUE,
+      'administer taxonomy',
+      'assign node weight',
     )
   );
 }
 
 /**
- * Set the permissions for Directory Admin, Webmaster and Administrator as a one time event rather than handled with features to allow additonal roles to be 
- * given these permissions without overridding the feature.
+ * Added the permission administer taxonomy and assign node weight for Administrator and Webmaster.
  */
 function ca_directory_update_7001() {
-  $vocab = taxonomy_vocabulary_machine_name_load('directory');
-  $vocabvid = $vocab->vid;
+  // Added the permission administer taxonomy and assign node weight for Administrator.
+  user_role_grant_permissions(3, 
+    array(
+      'administer taxonomy',
+      'assign node weight',
+    )
+  );
+
+  // Added the permission administer taxonomy and assign node weight for Webmaster.
+  user_role_grant_permissions(4, 
+    array(
+      'administer taxonomy',
+      'assign node weight',
+    )
+  );
   
-  $editterm = 'edit terms in ' . $vocabvid;
-  $deleteterm = 'delete terms in ' . $vocabvid;
-
-  // Set the permissions for Directory Admin.
-  user_role_change_permissions(6915241, 
-    array(
-      'create directory content' => TRUE,
-      'delete any directory content' => TRUE,
-      'delete own directory content' => TRUE,
-      'edit any directory content' => TRUE,
-      'edit own directory content' => TRUE,
-      $editterm => TRUE,
-      $deleteterm => TRUE,
-    )
-  );
-
-  // Set the permissions for Administrator
-  user_role_change_permissions(3, 
-    array(
-      'create directory content' => TRUE,
-      'delete any directory content' => TRUE,
-      'delete own directory content' => TRUE,
-      'edit any directory content' => TRUE,
-      'edit own directory content' => TRUE,
-      $editterm => TRUE,
-      $deleteterm => TRUE,
-    )
-  );
-
-  // Set the permissions for Webmaster
-  user_role_change_permissions(4, 
-    array(
-      'create directory content' => TRUE,
-      'delete any directory content' => TRUE,
-      'delete own directory content' => TRUE,
-      'edit any directory content' => TRUE,
-      'edit own directory content' => TRUE,
-      $editterm => TRUE,
-      $deleteterm => TRUE,
-    )
-  );
 }
