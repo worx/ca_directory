@@ -39,7 +39,7 @@ function ca_directory_settings_form() {
       'ca_directory_list_template_one_flex' => t('Template one Flex'),
     ),
     '#required' => TRUE,
-    '#default_value' => variable_get('ca_directory_list_template', 'ca_directory_list_template_one'),
+    '#default_value' => variable_get('ca_directory_list_template', 'ca_directory_list_template_one_flex'),
   );
   $form['actions'] = array(
     '#type' => 'actions',
