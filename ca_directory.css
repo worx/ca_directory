@@ -48,5 +48,5 @@
 }
 
 .ca-directory-flex .views-row {
-  width: 33%
+  flex: 0 1 30%;
 }
