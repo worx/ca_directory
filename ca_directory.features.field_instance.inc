@@ -156,8 +156,9 @@ function ca_directory_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'div_div_div',
     'field_name' => 'field_ca_directory_email',
-    'label' => 'Email',
+    'label' => 'E-Mail',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -473,7 +474,7 @@ function ca_directory_field_default_field_instances() {
   t('Body');
   t('Categories');
   t('Contact');
-  t('Email');
+  t('E-Mail');
   t('Fax');
   t('Image');
   t('Map');

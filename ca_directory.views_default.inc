@@ -208,7 +208,7 @@ function ca_directory_views_default_views() {
   $handler->display->display_options['fields']['field_ca_directory_fax']['element_label_type'] = 'strong';
   $handler->display->display_options['fields']['field_ca_directory_fax']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_ca_directory_fax']['empty_zero'] = TRUE;
-  /* Field: Content: Email */
+  /* Field: Content: E-Mail */
   $handler->display->display_options['fields']['field_ca_directory_email']['id'] = 'field_ca_directory_email';
   $handler->display->display_options['fields']['field_ca_directory_email']['table'] = 'field_data_field_ca_directory_email';
   $handler->display->display_options['fields']['field_ca_directory_email']['field'] = 'field_ca_directory_email';
@@ -576,7 +576,7 @@ function ca_directory_views_default_views() {
   $handler->display->display_options['fields']['field_ca_directory_fax']['table'] = 'field_data_field_ca_directory_fax';
   $handler->display->display_options['fields']['field_ca_directory_fax']['field'] = 'field_ca_directory_fax';
   $handler->display->display_options['fields']['field_ca_directory_fax']['element_label_type'] = 'strong';
-  /* Field: Content: Email */
+  /* Field: Content: E-Mail */
   $handler->display->display_options['fields']['field_ca_directory_email']['id'] = 'field_ca_directory_email';
   $handler->display->display_options['fields']['field_ca_directory_email']['table'] = 'field_data_field_ca_directory_email';
   $handler->display->display_options['fields']['field_ca_directory_email']['field'] = 'field_ca_directory_email';
